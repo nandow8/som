@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f10a2587-d4a3-4683-822e-b0e3f50df546">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select * from pedidos;]]>
+	</queryString>
+	<field name="ped_id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ped_cliente_nome" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ped_funcionario_id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ped_hora" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ped_data" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ped_valor" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ped_status" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="555" height="79" uuid="b6bc3c32-aa23-479d-990e-f19c15c79c25"/>
+				<imageExpression><![CDATA["C:\\Users\\Fernando\\Desktop\\header som.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="35" uuid="0fba41c8-c559-4e9e-9802-248d5cc0379e"/>
+				<textElement textAlignment="Center">
+					<font size="20" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Relatorio de Vendas]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="24" splitType="Stretch">
+			<staticText>
+				<reportElement x="18" y="4" width="85" height="20" uuid="2a463af6-3a2b-49f0-bd1e-c01bbdcca31f"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Clientes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="128" y="2" width="74" height="20" uuid="070431b0-6689-44c3-a90f-be699ee46705"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Funcionario ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="223" y="4" width="64" height="20" uuid="a3956a50-f39d-4977-9444-0f987e09468a"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[ped_hora]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="313" y="2" width="66" height="20" uuid="480d3f56-fae8-4f49-9534-72e3d1a39e17"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[ped_data]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="413" y="4" width="100" height="20" uuid="c34cc5cc-00ad-4f37-aad2-ccba897e50b3"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[ped_valor]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="18" y="0" width="85" height="20" uuid="22fdf161-2437-4d4c-8afd-55418465d02c"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{ped_cliente_nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="128" y="0" width="74" height="20" uuid="e68311e4-e8fa-45b1-b402-648715533a70"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{ped_funcionario_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="223" y="0" width="64" height="20" uuid="20ea6df2-8eae-41a5-bda6-9340984757a2"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{ped_hora}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="313" y="0" width="66" height="20" uuid="97015300-dacb-4f11-8c0d-9e6a5e9318e6"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{ped_data}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="413" y="0" width="100" height="20" uuid="ac843577-8c21-493e-adaf-e720cc4bad5e"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{ped_valor}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="29" splitType="Stretch">
+			<staticText>
+				<reportElement x="18" y="9" width="522" height="20" uuid="08a368d6-0d7c-4b07-aa4f-01a68acdb938"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Som e Alarme Nandao           Rua Masatsuka ida   N 36     Vila Farma - Suzano - SP]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>
